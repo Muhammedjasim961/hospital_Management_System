@@ -1,0 +1,362 @@
+#default-carousel {
+  width: 100%;
+  height: 500px;
+}
+.carousel-item img {
+  width: 100%;
+  height: 500px; /* Or set a fixed height for the container */
+  object-fit: cover; /* Prevents image from being stretched */
+  width: 100%;
+}
+.carousel-height {
+  height: 450px; /* Set a fixed height for the carousel container */
+}
+
+/* CAROUSELS CONTENT */
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 600px;
+  opacity: 0;
+  animation: slideIn 1.5s ease forwards;
+}
+
+.carousel-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f86086;
+  margin-bottom: 10px;
+}
+
+.carousel-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.carousel-desc {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #f2f2f2;
+}
+
+.first-carousel-btn {
+  background-color: #f86f91;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.first-carousel-btn:hover {
+  background-color: #e26886;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(-50%);
+    opacity: 1;
+  }
+}
+/* second carousel  */
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(65%);
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 650px;
+  opacity: 0;
+  animation: slideIn 1.5s ease forwards;
+}
+
+.carousel-subtitle2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f9b469;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.carousel-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.carousel-desc {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #f5f5f5;
+}
+
+.carousel-btn {
+  background-color: #f4a34c;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.carousel-btn:hover {
+  background-color: #f9b469;
+  transform: scale(1.05);
+}
+
+/* Left-to-right animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%) translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(-50%);
+    opacity: 1;
+  }
+}
+/* 3rd carousel */
+.babycare-slide-content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+  padding: 0 1rem;
+  animation: fadeDownSoft 1.3s ease-out forwards;
+}
+
+@keyframes fadeDownSoft {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.babycare-subtitle {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.5rem;
+}
+
+.babycare-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.babycare-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.babycare-btn {
+  background-color: #e0aa2b;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.babycare-btn:hover {
+  background-color: #fccf68;
+  transform: translateY(-2px);
+}
+/* fourth carousel */
+.doctors-slide-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  text-align: left;
+  max-width: 550px;
+  z-index: 5;
+  color: #fff;
+  animation: slideInLeftSoft 1.2s ease-out forwards;
+}
+
+@keyframes slideInLeftSoft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+.doctors-subtitle {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(94, 234, 212, 0.9); /* Soft teal accent */
+  margin-bottom: 0.5rem;
+}
+
+.doctors-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e0f7f5;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.doctors-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.doctors-btn {
+  background-color: #14b8a6; /* Teal primary */
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.doctors-btn:hover {
+  background-color: #0d9488;
+  transform: translateY(-2px);
+}
+
+/* 5th carousel (optional) */
+.emergency-slide-content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 600px;
+  color: #fff;
+  z-index: 6;
+  animation: slideFromTop 1.2s ease-out forwards;
+}
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.emergency-subtitle {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #e90000; /* Soft emergency red accent */
+  margin-bottom: 0.4rem;
+  font-weight: 900;
+}
+
+.emergency-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffe5e5;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+  margin-bottom: 0.7rem;
+}
+
+.emergency-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+
+.emergency-btn {
+  background-color: #dc2626; /* Deep red */
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.emergency-btn:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+}

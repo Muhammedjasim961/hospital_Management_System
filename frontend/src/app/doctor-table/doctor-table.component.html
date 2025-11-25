@@ -1,0 +1,426 @@
+<nav class="w-full">
+  <ul
+    class="flex flex-col sm:flex-row items-stretch gap-2 sm:gap-1 lg:gap-2 p-2 sm:p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg shadow-gray-200/20 dark:shadow-gray-900/20"
+  >
+    <!-- Appointment Link -->
+    <li class="flex-1 min-w-0 group">
+      <a
+        routerLink="/appointment"
+        routerLinkActive="bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-2xl shadow-teal-500/30 scale-105 border-teal-400 animate-pulse-glow"
+        class="nav-item-custom"
+      >
+        <div
+          class="relative z-10 flex flex-col sm:flex-row items-center gap-2 sm:gap-3 transition-all duration-300"
+        >
+          <svg
+            class="w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300 group-hover:text-teal-600 dark:group-hover:text-teal-400 group-hover:scale-110"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+          <span
+            class="text-sm sm:text-base font-medium whitespace-nowrap transition-all duration-300 group-hover:text-teal-700 dark:group-hover:text-teal-300 group-hover:font-semibold relative overflow-hidden"
+          >
+            <span class="block">Appointments</span>
+          </span>
+        </div>
+        <div class="nav-underline-custom"></div>
+      </a>
+    </li>
+
+    <!-- Doctor Link -->
+    <li class="flex-1 min-w-0 group">
+      <a
+        routerLink="/doctor"
+        routerLinkActive="bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-2xl shadow-teal-500/30 scale-105 border-teal-400 animate-pulse-glow"
+        class="nav-item-custom"
+      >
+        <div
+          class="relative z-10 flex flex-col sm:flex-row items-center gap-2 sm:gap-3 transition-all duration-300"
+        >
+          <svg
+            class="w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300 group-hover:text-teal-600 dark:group-hover:text-teal-400 group-hover:scale-110"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            />
+          </svg>
+          <span
+            class="text-sm sm:text-base font-medium whitespace-nowrap transition-all duration-300 group-hover:text-teal-700 dark:group-hover:text-teal-300 group-hover:font-semibold relative overflow-hidden"
+          >
+            <span class="block">Doctors</span>
+          </span>
+        </div>
+        <div class="nav-underline-custom"></div>
+      </a>
+    </li>
+
+    <!-- Patient Link -->
+    <li class="flex-1 min-w-0 group">
+      <a
+        routerLink="/patient"
+        routerLinkActive="bg-gradient-to-br from-teal-500 to-cyan-600 text-white shadow-2xl shadow-teal-500/30 scale-105 border-teal-400 animate-pulse-glow"
+        class="nav-item-custom"
+      >
+        <div
+          class="relative z-10 flex flex-col sm:flex-row items-center gap-2 sm:gap-3 transition-all duration-300"
+        >
+          <svg
+            class="w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300 group-hover:text-teal-600 dark:group-hover:text-teal-400 group-hover:scale-110"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
+            />
+          </svg>
+          <span
+            class="text-sm sm:text-base font-medium whitespace-nowrap transition-all duration-300 group-hover:text-teal-700 dark:group-hover:text-teal-300 group-hover:font-semibold relative overflow-hidden"
+          >
+            <span class="block">Patients</span>
+          </span>
+        </div>
+        <div class="nav-underline-custom"></div>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Main Content -->
+<div
+  class="min-h-screen bg-gradient-to-br from-white via-teal-300 to-cyan-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-4 lg:p-6"
+>
+  <!-- Header Section -->
+  <div
+    class="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-2 gap-4"
+  >
+    <!-- Back Button -->
+    <div class="flex-shrink-0">
+      <a href="/home" class="back-button">
+        <svg
+          class="back-icon"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M14.502 7.046h-2.5v-.928a2.122 2.122 0 0 0-1.199-1.954 1.827 1.827 0 0 0-1.984.311L3.71 8.965a2.2 2.2 0 0 0 0 3.24L8.82 16.7a1.829 1.829 0 0 0 1.985.31 2.121 2.121 0 0 0 1.199-1.959v-.928h1a2.025 2.025 0 0 1 1.999 2.047V19a1 1 0 0 0 1.275.961 6.59 6.59 0 0 0 4.662-7.22 6.593 6.593 0 0 0-6.437-5.695Z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Page Title -->
+    <div class="text-center lg:text-left">
+      <h1
+        class="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-2"
+      >
+        Doctor Management
+      </h1>
+      <p class="text-gray-600 dark:text-gray-300 text-lg">
+        Manage your medical team efficiently
+      </p>
+    </div>
+  </div>
+
+  <!-- Main Grid Layout -->
+  <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-8 max-w-7xl mx-auto">
+    <!-- Add Doctor Form -->
+    <div class="w-full">
+      <div class="doctor-form-container">
+        <div class="form-header">
+          <h2 class="form-title">Add New Doctor</h2>
+          <p class="form-subtitle">Register a new medical professional</p>
+        </div>
+
+        <form class="space-y-6" [formGroup]="doctorForm">
+          <!-- Doctor Name Field -->
+          <div class="form-field-group">
+            <label class="form-label">
+              Doctor Name <span class="required-star">*</span>
+            </label>
+            <div class="relative">
+              <input
+                formControlName="name"
+                type="text"
+                value="Dr:"
+                class="form-input"
+                placeholder="Enter doctor's full name"
+                required
+              />
+              <svg
+                class="input-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Specialty Selection -->
+          <div class="form-field-group">
+            <label class="form-label">
+              Specialty <span class="required-star">*</span>
+            </label>
+            <div class="relative">
+              <select formControlName="specialty" class="form-select">
+                <option value="" disabled selected>
+                  Select medical specialty
+                </option>
+                <option [value]="item.value" *ngFor="let item of Specialties">
+                  {{ item.name }}
+                </option>
+              </select>
+              <svg
+                class="select-chevron"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button
+              type="button"
+              [disabled]="doctorForm.invalid || loading"
+              (click)="submitDoctorData()"
+              class="submit-button"
+            >
+              <span class="button-content">
+                <svg
+                  class="button-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
+                </svg>
+                <span>{{ loading ? "Adding Doctor..." : "Add Doctor" }}</span>
+              </span>
+              <div class="button-shine"></div>
+            </button>
+
+            <button type="reset" class="clear-button">
+              <span class="button-content">
+                <svg
+                  class="button-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+                <span>Clear Form</span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Doctors List -->
+    <div class="w-full">
+      <div class="doctors-list-container">
+        <div class="list-header">
+          <h2 class="list-title">Medical Team</h2>
+          <p class="list-subtitle">{{ doctors.length }} doctors registered</p>
+        </div>
+
+        <div class="doctors-grid">
+          <div
+            *ngFor="let item of doctors; let i = index"
+            class="doctor-card group"
+          >
+            <!-- Card Header -->
+            <div class="card-header">
+              <div class="doctor-avatar">
+                <svg
+                  class="avatar-icon"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="doctor-info">
+                <h3 class="doctor-name">{{ item.name }}</h3>
+                <p class="doctor-specialty">{{ item.specialty }}</p>
+              </div>
+              <span class="doctor-number">#{{ i + 1 }}</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="card-actions">
+              <button
+                type="button"
+                class="action-button edit-button"
+                (click)="editDoctor(item)"
+              >
+                <svg
+                  class="action-icon"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                  />
+                </svg>
+                <span class="action-tooltip">Edit Doctor</span>
+              </button>
+
+              <button
+                class="action-button delete-button"
+                type="button"
+                (click)="openModal(item)"
+              >
+                <svg
+                  class="action-icon"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="action-tooltip">Delete Doctor</span>
+              </button>
+            </div>
+
+            <!-- Card Background Effect -->
+            <div class="card-background"></div>
+          </div>
+
+          <!-- Empty State -->
+          <div *ngIf="doctors.length === 0" class="empty-state">
+            <svg
+              class="empty-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            <h3 class="empty-title">No Doctors Found</h3>
+            <p class="empty-description">
+              Add your first doctor to get started
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div *ngIf="showModal" class="modal-overlay" (click)="closeModal()">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg
+          class="modal-icon"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"
+          />
+        </svg>
+        <h3 class="modal-title">Delete Doctor</h3>
+        <button type="button" (click)="closeModal()" class="modal-close-button">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-message">
+          Are you sure you want to delete
+          <!-- <strong>{{ selectedDoctor? }}</strong -->
+          >? This action cannot be undone.
+        </p>
+      </div>
+
+      <div class="modal-actions">
+        <button
+          (click)="closeModal()"
+          type="button"
+          class="modal-cancel-button"
+        >
+          Cancel
+        </button>
+        <button
+          (click)="DeleteDoctor()"
+          type="button"
+          class="modal-confirm-button"
+        >
+          Delete Doctor
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-spinner *ngIf="loading"></app-spinner>

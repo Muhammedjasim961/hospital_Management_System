@@ -1,0 +1,212 @@
+<div
+  id="default-carousel"
+  class="relative w-full h-[1000px]"
+  data-carousel="slide"
+>
+  <!-- Carousel wrapper -->
+  <div class="relative carousel-height overflow-hidden">
+    <!-- Item 1 -->
+    <div
+      class="hidden duration-1000 ease-in-out carousel-item"
+      data-carousel-item
+    >
+      <img
+        src="/images/carousel-1.jpg"
+        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+      />
+      <div class="carousel-content animate-left">
+        <h4 class="carousel-subtitle">DEDICATED MEDICAL CARE</h4>
+        <h1 class="carousel-title">EXPERT HEALTHCARE TEAM</h1>
+        <p class="carousel-desc">
+          We bring together leading doctors, compassionate nurses, and advanced
+          medical technology to deliver world-class healthcare with a human
+          touch.
+        </p>
+        <button class="first-carousel-btn">MEET OUR SPECIALISTS</button>
+      </div>
+    </div>
+    <!-- Item 2 -->
+    <div
+      class="hidden duration-700 ease-in-out carousel-item"
+      data-carousel-item
+    >
+      <img
+        src="/images/carousel.2.jpg"
+        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+      />
+      <div class="carousel-content animate-left">
+        <h4 class="carousel-subtitle2">MATERNITY & NEWBORN CARE</h4>
+        <h1 class="carousel-title">A NEW LIFE BEGINS WITH CARE</h1>
+        <p class="carousel-desc">
+          From your first heartbeat to your baby’s first cry, our maternity
+          experts ensure a safe, compassionate, and joyful journey for every
+          mother and child.
+        </p>
+        <button class="carousel-btn">LEARN MORE</button>
+      </div>
+    </div>
+    <!-- Item 3 -->
+    <div
+      class="hidden duration-700 ease-in-out carousel-item"
+      data-carousel-item
+    >
+      <img
+        src="/images/carousel-3.jpg"
+        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+        width="1600"
+        height="900"
+      />
+      <div class="babycare-slide-content fade-top-center text-center">
+        <h5 class="babycare-subtitle">Maternity & Newborn Wellness</h5>
+        <h2 class="babycare-heading">Gentle Beginnings, Lifelong Care</h2>
+        <p class="babycare-text">
+          Our dedicated maternity team provides exceptional care for mothers and
+          newborns — ensuring safety, warmth, and every tender moment is
+          protected.
+        </p>
+        <button class="babycare-btn">Discover More</button>
+      </div>
+    </div>
+    <!-- Item 4 -->
+    <div
+      class="hidden duration-700 ease-in-out carousel-item"
+      data-carousel-item
+    >
+      <img
+        src="/images/carousel-4.jpg"
+        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+      />
+      <div class="doctors-slide-content slide-from-left">
+        <h5 class="doctors-subtitle">Our Medical Experts</h5>
+        <h2 class="doctors-heading">Excellence in Every Specialty</h2>
+        <p class="doctors-text">
+          From skilled surgeons to compassionate nurses, our multidisciplinary
+          team ensures every patient receives world-class treatment with trust,
+          care, and precision.
+        </p>
+        <button class="doctors-btn">Meet Our Doctors</button>
+      </div>
+    </div>
+    <!-- Item 5 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img
+        src="/images/carousel-5.jpg"
+        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+      />
+      <div class="emergency-slide-content slide-from-top">
+        <h5 class="emergency-subtitle">24/7 Emergency Care</h5>
+        <h2 class="emergency-heading">
+          Every Second Counts, We are Here for You
+        </h2>
+        <p class="emergency-text">
+          Our state-of-the-art Emergency Department provides rapid response,
+          critical care, and immediate attention — because in moments that
+          matter, expertise and compassion make the difference.
+        </p>
+        <button class="emergency-btn">Get Emergency Help</button>
+      </div>
+    </div>
+  </div>
+  <!-- Slider indicators -->
+  <div
+    class="absolute z-30 flex bg-teal-500 p-2 rounded-2xl -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+  >
+    <button
+      type="button"
+      class="w-3 h-3 rounded-full bg-teal-600 hover:bg-teal-700 transition-colors"
+      aria-current="true"
+      aria-label="Slide 1"
+      data-carousel-slide-to="0"
+    ></button>
+
+    <button
+      type="button"
+      class="w-3 h-3 rounded-full bg-teal-300 hover:bg-teal-400 transition-colors"
+      aria-current="false"
+      aria-label="Slide 2"
+      data-carousel-slide-to="1"
+    ></button>
+
+    <button
+      type="button"
+      class="w-3 h-3 rounded-full bg-teal-300 hover:bg-teal-400 transition-colors"
+      aria-current="false"
+      aria-label="Slide 3"
+      data-carousel-slide-to="2"
+    ></button>
+
+    <button
+      type="button"
+      class="w-3 h-3 rounded-full bg-teal-300 hover:bg-teal-400 transition-colors"
+      aria-current="false"
+      aria-label="Slide 4"
+      data-carousel-slide-to="3"
+    ></button>
+
+    <button
+      type="button"
+      class="w-3 h-3 rounded-full bg-teal-300 hover:bg-teal-400 transition-colors"
+      aria-current="false"
+      aria-label="Slide 5"
+      data-carousel-slide-to="4"
+    ></button>
+  </div>
+  <!-- Slider controls -->
+  <button
+    type="button"
+    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-prev
+  >
+    <span
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-500/30 dark:bg-gray-800/30 group-hover:bg-teal-500/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+    >
+      <svg
+        class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 1 1 5l4 4"
+        />
+      </svg>
+      <span class="sr-only bg-teal-500">Previous</span>
+    </span>
+  </button>
+  <button
+    type="button"
+    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-next
+  >
+    <span
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-500/30 dark:bg-gray-800/30 group-hover:bg-teal-500/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+    >
+      <svg
+        class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 9 4-4-4-4"
+        />
+      </svg>
+      <span class="sr-only text-teal-500">Next</span>
+    </span>
+  </button>
+</div>

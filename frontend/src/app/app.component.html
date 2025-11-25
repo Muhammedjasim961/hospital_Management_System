@@ -1,0 +1,187 @@
+<nav class="navbar-container">
+  <!-- Animated Background Elements -->
+  <div class="nav-background">
+    <div class="floating-circle circle-1"></div>
+    <div class="floating-circle circle-2"></div>
+    <div class="floating-circle circle-3"></div>
+  </div>
+
+  <div class="nav-content">
+    <!-- Logo Section -->
+    <div class="logo-section">
+      <a href="/home" class="logo-link">
+        <div class="logo-wrapper">
+          <img
+            src="/images/hospital.png"
+            class="logo-image"
+            alt="Hospital Logo"
+          />
+        </div>
+        <span class="brand-text"> MedCare </span>
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <div class="desktop-nav">
+      <ul class="nav-list">
+        <li class="nav-item" *ngFor="let item of navItems">
+          <a [href]="item.link" class="nav-link">
+            <span class="link-text">{{ item.name }}</span>
+            <span class="link-underline"></span>
+            <div class="link-hover-effect"></div>
+          </a>
+        </li>
+        <li>
+          <span class="link-text" *ngIf="getToken">
+            <app-logout></app-logout>
+          </span>
+        </li>
+      </ul>
+
+      <!-- Appointment Button -->
+      <div class="appointment-section">
+        <div class="appointment-glow"></div>
+        <a href="/appointment" class="appointment-button">
+          <span class="button-content">
+            <svg
+              class="button-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+              ></path>
+            </svg>
+            Make Appointment
+            <svg
+              class="button-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              ></path>
+            </svg>
+          </span>
+          <div class="button-shine"></div>
+          <div class="button-particles">
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- User Menu -->
+      <div class="user-menu">
+        <button class="user-button" (click)="toggleUserMenu()">
+          <div class="user-glow"></div>
+          <img src="/images/profile.png" alt="Profile" class="user-image" />
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div class="user-dropdown" [class.active]="isUserMenuOpen">
+          <div class="dropdown-header">
+            <img
+              src="/images/profile.png"
+              alt="Profile"
+              class="dropdown-image"
+            />
+            <div class="user-info">
+              <p class="user-name">Dr. Sarah Johnson</p>
+              <p class="user-email">sarah.johnson7medcare.com</p>
+            </div>
+          </div>
+
+          <div class="dropdown-menu">
+            <a
+              *ngFor="let menuItem of userMenuItems"
+              [href]="menuItem.link"
+              class="dropdown-item"
+            >
+              <span class="dropdown-text">{{ menuItem.name }}</span>
+              <span class="dropdown-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="mobile-nav">
+      <a href="/appointment" class="mobile-appointment-button">
+        <svg
+          class="mobile-button-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+          ></path>
+        </svg>
+        Book
+      </a>
+
+      <button class="mobile-menu-button" (click)="toggleMobileMenu()">
+        <span class="menu-icon"></span>
+        <span class="menu-icon"></span>
+        <span class="menu-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-menu" [class.active]="isMobileMenuOpen">
+    <div class="mobile-menu-content">
+      <div class="mobile-nav-items">
+        <a
+          *ngFor="let item of navItems"
+          [href]="item.link"
+          class="mobile-nav-link"
+          (click)="toggleMobileMenu()"
+        >
+          <span class="mobile-link-text">{{ item.name }}</span>
+          <span class="mobile-link-arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Mobile User Menu -->
+      <div class="mobile-user-section">
+        <div class="mobile-user-info">
+          <img
+            src="/images/profile.png"
+            alt="Profile"
+            class="mobile-user-image"
+          />
+          <div>
+            <p class="mobile-user-name">Dr. Sarah Johnson</p>
+            <p class="mobile-user-email">sarah.johnson7medcare.com</p>
+          </div>
+        </div>
+        <div class="mobile-user-menu">
+          <a
+            *ngFor="let menuItem of userMenuItems"
+            [href]="menuItem.link"
+            class="mobile-dropdown-item"
+            (click)="toggleMobileMenu()"
+          >
+            {{ menuItem.name }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

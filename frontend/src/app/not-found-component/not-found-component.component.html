@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0fdfa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: #0f766e;
+        }
+
+        .lost-illustration {
+            font-size: 8rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #0f766e;
+        }
+
+        .error-code {
+            font-size: 6rem;
+            font-weight: 800;
+            color: #0d9488;
+            margin-bottom: 1rem;
+        }
+
+        .message {
+            font-size: 1.3rem;
+            color: #14b8a6;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 14px 36px;
+            background-color: #0d9488;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #0d9488;
+        }
+
+        .home-button:hover {
+            background-color: transparent;
+            color: #0d9488;
+            transform: translateY(-2px);
+        }
+
+        .suggestion {
+            margin-top: 2rem;
+            color: #14b8a6;
+            font-style: italic;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 768px) {
+            .lost-illustration { font-size: 6rem; }
+            h1 { font-size: 2.5rem; }
+            .error-code { font-size: 4rem; }
+            .message { font-size: 1.1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .lost-illustration { font-size: 4rem; }
+            h1 { font-size: 2rem; }
+            .error-code { font-size: 3rem; }
+            .message { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="lost-illustration">🧭</div>
+    <div class="error-code">404</div>
+    <h1>Oops! You're lost.</h1>
+    <p class="message">
+        The page you're looking for seems to have wandered off.
+        Don't worry, let's get you back on track.
+    </p>
+    <a href="/" class="home-button">Take Me Home</a>
+    <p class="suggestion">If you believe this is a mistake, please contact support.</p>
+</body>
+</html>

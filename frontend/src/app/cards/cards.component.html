@@ -1,0 +1,99 @@
+<div class="flex items-center justify-center gap-10 slide-up-container">
+  <div
+    *ngFor="let item of cards; let i = index"
+    class="w-64 transition-all duration-1000 ease-in-out delay-75 bg-white border border-b-4 border-gray-100 rounded-lg shadow-lg slide-up-text hover:ease-out hover:scale-105 hover:shadow-gray-400 dark:bg-gray-800 dark:border-gray-700 animate-slide-up"
+    [style.animation-delay]="i * 200 + 'ms'"
+  >
+    <a href="#">
+      <img
+        class="rounded-t-lg"
+        src="{{ item.image }}"
+        alt="images of our experties"
+      />
+    </a>
+    <div class="p-5">
+      <a href="#">
+        <h5 class="mb-2 font-bold tracking-tight text-teal-800 dark:text-white">
+          {{ item.title }}
+        </h5>
+      </a>
+      <p class="mb-3 font-serif text-gray-600 dark:text-gray-400">
+        {{ item.description }}
+      </p>
+      <a
+        href="/home"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-teal-800 rounded-lg hover:bg-teal-400 focus:ring-4 focus:outline-none focus:ring-teal-300 dark:bg-blue-600 dark:hover:bg-teal-700 dark:focus:ring-blue-800"
+      >
+        Read more
+        <svg
+          class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div
+  class="py-10 duration-700 ease-in-out translate-y-10 opacity-0 carousel-item animate-fade-in-up"
+  data-delay="300"
+>
+  <div class="max-w-3xl px-4 mx-auto text-center">
+    <h1
+      class="mb-8 text-4xl font-bold text-gray-800 translate-y-10 opacity-0 animate-fade-in-up"
+      data-delay="500"
+    >
+      Qualified Healthcare Professionals
+    </h1>
+    <p
+      class="text-lg text-gray-600 translate-y-10 opacity-0 animate-fade-in-up"
+      data-delay="700"
+    >
+      Our team of medical experts brings together years of experience, advanced
+      skills, and compassionate care to deliver the best possible outcomes. We
+      are committed to excellence in every treatment, ensuring each patient
+      receives personalized attention and world-class healthcare.
+    </p>
+  </div>
+
+  <div
+    class="flex items-center justify-center object-cover gap-10 mt-10 mb-8 duration-700 ease-in-out carousel-item"
+  >
+    <div
+      *ngFor="let item of doctors; let i = index"
+      class="w-64 transition-all duration-300 translate-y-10 bg-white rounded-lg shadow-lg opacity-0 hover:scale-105 hover:shadow-xl hover:saturate-150 shadow-gray-400 dark:bg-gray-800 dark:border-gray-700 animate-slide-up"
+      [style.animation-delay]="i * 200 + 900 + 'ms'"
+    >
+      <a href="#">
+        <img
+          class="w-full h-64 rounded-t-lg"
+          src="{{ item.image }}"
+          alt="doctors images"
+        />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            {{ item.name }}
+          </h5>
+        </a>
+        <p class="mb-3 font-serif text-gray-700 dark:text-gray-400">
+          {{ item.specialty }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
